@@ -4,13 +4,21 @@
 To run this project, you need Python 3.7 or higher and the following Python libraries:
 
 Flask
+
 pandas
+
 numpy
+
 plotly
+
 scikit-learn
+
 nltk
+
 SQLAlchemy
+
 joblib
+
 wordcloud
 
 # You can install these dependencies using pip:
