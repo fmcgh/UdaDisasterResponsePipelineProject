@@ -1,0 +1,9 @@
+Flask
+pandas
+numpy
+plotly
+scikit-learn
+nltk
+SQLAlchemy
+joblib
+wordcloud
