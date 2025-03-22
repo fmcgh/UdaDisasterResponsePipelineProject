@@ -64,12 +64,12 @@ def tokenize(text):
 
 def build_model():
     """
-    Builds a machine learning pipeline and wraps it with GridSearchCV for hyperparameter tuning.
+    This builds a machine learning pipeline and wraps it with GridSearchCV for hyperparameter tuning.
     
     The pipeline consists of:
       - A TfidfVectorizer for transforming text into numerical features.
       - A MultiOutputClassifier using LogisticRegression for multi-label classification.
-      
+
     Returns:
       cv (GridSearchCV): Grid search object with the pipeline and parameter grid.
     """
