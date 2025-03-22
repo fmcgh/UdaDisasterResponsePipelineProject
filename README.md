@@ -1,6 +1,9 @@
 # UdaDisasterResponsePipelineProject
 Part of an academic course with Udacity.
 
+# GitHub link
+See main at: https://github.com/fmcgh/UdaDisasterResponsePipelineProject
+
 # Project Overview
 This project, part of a Udacity course, demonstrates how to build a machine learning pipeline for classifying disaster messages. It consists of three main components:
 
@@ -115,7 +118,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 3. Run your web app: `python run.py`
 
 4. Click the `PREVIEW` button to open the homepage
-<<<<<<< HEAD
->>>>>>> Update README.md
-=======
->>>>>>> b5059711b9aad60542d3132fbdacc2e3f5236e3e
