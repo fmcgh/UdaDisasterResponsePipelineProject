@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< cba57c5ba1d8b7acdafd57b6864c156989c9817a
 # UdaDisasterResponsePipelineProject
 Part of an academic course with Udacity.
-=======
-=======
->>>>>>> b5059711b9aad60542d3132fbdacc2e3f5236e3e
-# Disaster Response Pipeline Project
+
 # Setup and Installation
 ## Prerequisites
 To run this project, you need Python 3.7 or higher and the following Python libraries:
@@ -88,7 +83,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 3. Run your web app: `python run.py`
 
 4. Click the `PREVIEW` button to open the homepage
-<<<<<<< HEAD
->>>>>>> Update README.md
-=======
->>>>>>> b5059711b9aad60542d3132fbdacc2e3f5236e3e
