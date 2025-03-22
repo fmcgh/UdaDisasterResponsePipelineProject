@@ -1,11 +1,38 @@
-<<<<<<< HEAD
-<<<<<<< cba57c5ba1d8b7acdafd57b6864c156989c9817a
 # UdaDisasterResponsePipelineProject
 Part of an academic course with Udacity.
-=======
-=======
->>>>>>> b5059711b9aad60542d3132fbdacc2e3f5236e3e
-# Disaster Response Pipeline Project
+
+# Project Overview
+This project, part of a Udacity course, demonstrates how to build a machine learning pipeline for classifying disaster messages. It consists of three main components:
+
+Data Cleaning (ETL Pipeline): Merge and clean raw disaster messages and category labels, storing the results in a SQLite database.
+
+Model Building (ML Pipeline): Train a multi-label classifier to predict up to 36 disaster categories using NLP techniques.
+
+Web Application: Create a simple Flask web app that lets users input messages and view classification results and interactive visualizations.
+
+# Dataset Details
+Two primary files from Appen are used:
+
+disaster_messages.csv: Contains real messages from disaster events.
+
+disaster_categories.csv: Provides corresponding category labels.
+
+Key points include real-world examples, multi-label assignments, data cleaning to handle inconsistencies, and a diverse set of messages that challenge the model to perform well.
+
+# Project Results
+The final model accurately categorizes messages into relevant disaster types. The web app presents:
+
+A bar chart for message categories,
+
+A histogram of message lengths,
+
+A chart of the top 10 words,
+
+A heatmap showing category correlations.
+
+Overall, the project illustrates a practical workflow from data cleaning to model training and deployment in a user-friendly interface.
+
+
 # Setup and Installation
 ## Prerequisites
 To run this project, you need Python 3.7 or higher and the following Python libraries:
