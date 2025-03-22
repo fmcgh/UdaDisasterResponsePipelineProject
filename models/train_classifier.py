@@ -10,6 +10,9 @@ import joblib
 from nltk.tokenize import word_tokenize
 import nltk
 
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import GridSearchCV
+
 nltk.download('punkt')
 
 
@@ -61,26 +64,30 @@ def tokenize(text):
 
 def build_model():
     """
-    Builds and returns a machine learning pipeline for multi-label classification.
-
+    This builds a machine learning pipeline and wraps it with GridSearchCV for hyperparameter tuning.
+    
     The pipeline consists of:
-        - A TfidfVectorizer for transforming text data into numerical features.
-        - A MultiOutputClassifier using LogisticRegression for multi-label classification.
-    
-    Returns:
-    pipeline (Pipeline): The constructed model pipeline.
-    """
-    vectorizer = TfidfVectorizer(tokenizer=tokenize)
-    
-    model = MultiOutputClassifier(LogisticRegression())
-    
-    from sklearn.pipeline import Pipeline
-    pipeline = Pipeline([
-        ('vectorizer', vectorizer),
-        ('classifier', model)
-    ])
-    return pipeline
+      - A TfidfVectorizer for transforming text into numerical features.
+      - A MultiOutputClassifier using LogisticRegression for multi-label classification.
 
+    Returns:
+      cv (GridSearchCV): Grid search object with the pipeline and parameter grid.
+    """
+    pipeline = Pipeline([
+        ('vectorizer', TfidfVectorizer(tokenizer=tokenize)),
+        ('classifier', MultiOutputClassifier(LogisticRegression()))
+    ])
+    
+    # Creating parameters to search
+    parameters = {
+        'vectorizer__max_df': [0.8, 1.0],
+        'classifier__estimator__C': [1, 10] 
+    }
+    
+    # Create a GridSearchCV object
+    cv = GridSearchCV(pipeline, param_grid=parameters, scoring='f1_weighted', cv=3, verbose=3)
+    
+    return cv
 
 def evaluate_model(model, X_test, Y_test, category_names):
     """
